@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ConvertComponent } from './convert/convert.component';
-// import {CurrData} from './curr.model'
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,10 +16,6 @@ export class DataService {
 
   
   constructor(private _http: HttpClient ) { }
-  
-  getRates(){
-    return this._http.get(this.apiUrlBase);
-  }
   
   getSymbols() : Observable<any> {
     return this._http.get(this.apiUrlSymbols);
