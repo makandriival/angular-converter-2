@@ -1,12 +1,13 @@
 
-<div>
+<div class="converter_conteiner">
 
     <div class="inputs">
-
-        <select name="first" id="first" [formControl]="firstSymbol" (change)="getFirstSymbolValue()" >
-            <option *ngFor="let item of symbols" value={{item.symbol}}>
-                {{item.symbol}} {{item.description}}</option>
-        </select>
+        
+            <select name="first" id="first" [formControl]="firstSymbol" (change)="getFirstSymbolValue()" >
+                <option *ngFor="let item of symbols" value={{item.symbol}}>
+                    {{item.symbol}} {{item.description}}</option>
+                </select>
+            
 
         <input id="first" value={{firstValue}} type='number' [formControl] = "first" (input)="getFirstValue()"/>
         <input id="second" value={{secondValue}} type="number" [formControl] = "second" (input)="getSecondValue()" />
@@ -17,14 +18,7 @@
         </select>
 
     </div>
-    <div class="values">
-       <span>
-        {{firstSymbolValue}} {{firstValue}}
-        </span> 
-        <span>
-        {{secondValue}} {{secondSymbolValue}}
-        </span>
-    </div>
+    
     <span class="result">
         result : {{convertionResult}}
     </span>

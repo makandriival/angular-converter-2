@@ -1,7 +1,6 @@
-import { JsonPipe } from '@angular/common';
+
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { observable, Observable } from 'rxjs';
 import { DataService } from '../data.service';
 @Component({
   selector: 'app-convert',
@@ -26,6 +25,9 @@ export class ConvertComponent implements OnInit {
 
   convertionResult: number = 0;
   resDisp: number = 0;
+
+  // selectFirst: any = 'USD';
+  // selectSecond: any = 'UAH';
   
   // ============== geting exchange values ==============
 
@@ -43,10 +45,11 @@ export class ConvertComponent implements OnInit {
   
   getFirstSymbolValue() {
     this.firstSymbolValue = this.firstSymbol.value;
+    this.convertRequestFirst(this.firstValue, this.firstSymbolValue, this.secondSymbolValue)
   };
   getSecondSymbolValue() {
     this.secondSymbolValue = this.secondSymbol.value;
-    // console.log(this.secondSymbolValue)
+    this.convertRequestSecond(this.secondValue, this.secondSymbolValue, this.firstSymbolValue)
   }
   
   // ========= converting request =======

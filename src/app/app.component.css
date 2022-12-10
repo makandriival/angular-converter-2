@@ -5,6 +5,7 @@
     margin: 2rem;
 }
 .footer{
+    display: grid;
     position: fixed;
     bottom: 1rem;
     left: 1rem;
