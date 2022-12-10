@@ -25,12 +25,8 @@ export class ConvertComponent implements OnInit {
 
   convertionResult: number = 0;
   resDisp: number = 0;
-
-  // selectFirst: any = 'USD';
-  // selectSecond: any = 'UAH';
   
-  // ============== geting exchange values ==============
-
+  // ============== geting exchange amount values ==============
 
   getFirstValue() { 
     this.firstValue = (this.first.value)
@@ -41,7 +37,7 @@ export class ConvertComponent implements OnInit {
     this.convertRequestSecond(this.secondValue, this.secondSymbolValue, this.firstSymbolValue)
   }
   
-  // ========geting symbols===============
+  // ======== geting iso code symbols ===============
   
   getFirstSymbolValue() {
     this.firstSymbolValue = this.firstSymbol.value;
